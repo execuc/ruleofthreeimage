@@ -16,8 +16,6 @@ Notice
  * Zoom and shift are managed by wheel and middle click.
  * Image is able to be exported with \"left click save image as\" of navigator
 
-Video : 
-
 TODO
 --------------------
 
