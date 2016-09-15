@@ -3,7 +3,7 @@ Rule of three on image
 
 This web application is used to measure distance between points in an image. User defines a distance as reference and other distance are computed applying the rule of three.
 
-Web app : https://github.com/execuc/ruleofthreeimage/
+Web app : https://execuc.github.io/ruleofthreeimage/
 
 Video demonstration : https://www.youtube.com/watch?v=98LQMvc4gTY
 
