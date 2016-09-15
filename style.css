@@ -1,0 +1,167 @@
+#header, #footer, #content, #toolbar { 
+	position: absolute; 
+	left: 0; 
+	width: 100%; 
+}
+
+#header, #footer, #toolbar { 
+	overflow: hidden; 
+}
+
+#header { 
+	top: 0; height: 70px;
+	background: linear-gradient(90deg, #DDDDDD, #AAAAAA);
+	color : #444444;
+	font-family: Calibri;
+	font-size: 55px;
+}
+
+#header a {
+	font-size: 15px;
+	float: right;
+}
+
+#toolbar { 
+	top: 70px; 
+	height: 30px; 
+	display: flex; 
+	background: linear-gradient(90deg, #DDDDDD, #AAAAAA);
+	/* look at : https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#content { 
+	top: 100px; 
+	bottom: 0px;
+	overflow: auto; 
+	background: white; 
+}
+
+.border{
+	margin: 0px 2px 0px 2px;
+}
+
+#footer { 
+	bottom: 0; 
+	height: 0px;
+	background: linear-gradient(90deg, #DDDDDD, #AAAAAA);
+}
+
+#canvas {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+
+#files {
+	display: none;
+}
+
+#url{
+	background-color: #AAAAAA;
+	color: black;
+	border: 2px solid;
+	border-radius: 2px;
+	height:23px;
+	line-height: 25px;
+}
+
+.button{
+	cursor: pointer;
+	width: 90px;
+	height:25px;
+	line-height: 25px;
+	background-color: #AAAAAA;
+	color: black;
+	transition: 500ms all;
+	border: 2px solid;
+	border-radius: 2px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#url_button {
+	border: 0px solid;
+}
+
+.button:hover {
+	background-color: #555555;
+}
+
+.slide_align{
+	vertical-align: middle;
+}
+
+#label_unity{
+	vertical-align: middle;
+	border-color: white;
+}
+
+.red_border{
+	outline: 4px dashed red;
+	transition: 2000ms all;
+}
+
+.label_opacity input{
+	width : 60px;
+}
+
+.label_opacity, .label_color, .label_font, .label_unity, .label_url{
+	height:25px;
+	line-height: 25px;
+		border: 2px solid;
+	border-radius: 2px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #AAAAAA;
+	padding-right:5px;
+	padding-left:5px;
+}
+
+.label_url{
+	padding-left:0px;
+}
+
+
+#color_picker{
+	background-color: #AAAAAA;
+	border: 0px;
+}
+
+#unit_val{
+	background-color: #CCCCCC;
+	border: 0px solid;
+}
+
+#url{
+	background-color: #CCCCCC;
+	border: 0px solid;
+}
+
+.label_unity input{
+	width : 90px;
+	height:20px;
+}
+
+.label_color{
+	vertical-align: middle;
+
+}
+.label_color input{
+	width : 70px;
+	height: 22px;
+	padding-bottom:2px;
+}
+
+.label_font input{
+	width : 50px;
+}
+
+.show_label{
+	vertical-align: middle;
+}
