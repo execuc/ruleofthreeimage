@@ -5,7 +5,7 @@ This web application is used to measure distance between points in an image. Use
 
 Web app : https://execuc.github.io/ruleofthreeimage/
 
-Video demonstration : https://www.youtube.com/watch?v=98LQMvc4gTY
+Video demonstration : https://youtu.be/98LQMvc4gTY
 
 Notice
 --------------------
