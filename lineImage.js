@@ -56,7 +56,7 @@ class LineImageCanvas {
             this.lines.push({
                 x1: real_coord.x,
                 y1: real_coord.y,
-                x1: real_coord.x,
+                x2: real_coord.x,
                 y2: real_coord.y
             });
         } else if (button == "Middle") {
@@ -172,9 +172,10 @@ class LineImageCanvas {
     }
 
     onResize() {
+        var height =  $( window ).height() - this.parent.offset().top
         this.canvas.attr("width", this.parent.width());
-        this.canvas.attr("height", this.parent.height());
-        //his.offset = this.canvas.offset();
+        this.canvas.attr("height", height);
+        console.log(this.parent.height());
         this.transformation.update();
         this.draw();
     }
@@ -185,7 +186,6 @@ class LineImageCanvas {
         grd.addColorStop(1,"#AAAAAA");
         this.ctx.fillStyle=grd;
         this.ctx.fillRect(0, 0, this.canvas.attr("width"), this.canvas.attr("height"));
-//        this.ctx.Rect(0, 0, this.canvas.attr("width"), this.canvas.attr("height"));
     }
 
     loadNewImage(filename) {
