@@ -8,8 +8,10 @@ function imageLoadCallback(load) {
 }
 
 function firstLineCallback(line) {
-    $("#unit_val").addClass("red_border");
-
+    if(isNaN(parseFloat($("#unit_val").val().replace(',', '.'))))
+    {
+        $("#unit_val").addClass("red_border");
+    }
 }
 
 var callbacks = {

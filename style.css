@@ -1,19 +1,16 @@
-#header, #footer, #content, #toolbar { 
-	position: absolute; 
-	left: 0; 
-	width: 100%; 
-}
-
-#header, #footer, #toolbar { 
-	overflow: hidden; 
+body {
+	display:flex;
+	flex-flow: column;
+  	height: 100%;
+  	margin: 0
 }
 
 #header { 
-	top: 0; height: 70px;
 	background: linear-gradient(90deg, #DDDDDD, #AAAAAA);
 	color : #444444;
 	font-family: Calibri;
 	font-size: 55px;
+	height: 70px;
 }
 
 #header a {
@@ -22,8 +19,7 @@
 }
 
 #toolbar { 
-	top: 70px; 
-	height: 30px; 
+	 flex: auto;
 	display: flex; 
 	background: linear-gradient(90deg, #DDDDDD, #AAAAAA);
 	/* look at : https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
@@ -33,10 +29,10 @@
 }
 
 #content { 
-	top: 100px; 
-	bottom: 0px;
-	overflow: auto; 
+	flex: auto;
+	overflow: hidden; 
 	background: white; 
+	display: block;
 }
 
 .border{
@@ -44,8 +40,7 @@
 }
 
 #footer { 
-	bottom: 0; 
-	height: 0px;
+	height: 10px;
 	background: linear-gradient(90deg, #DDDDDD, #AAAAAA);
 }
 
@@ -67,8 +62,8 @@
 	color: black;
 	border: 2px solid;
 	border-radius: 2px;
-	height:23px;
-	line-height: 25px;
+	height:21px;
+	line-height: 23px;
 }
 
 .button{
@@ -83,6 +78,7 @@
 	border-radius: 2px;
 	text-align: center;
 	vertical-align: middle;
+	margin-bottom: 5px;
 }
 
 #url_button {
@@ -104,7 +100,7 @@
 
 .red_border{
 	outline: 4px dashed red;
-	transition: 2000ms all;
+	transition: 1000ms all;
 }
 
 .label_opacity input{
@@ -121,6 +117,7 @@
 	background-color: #AAAAAA;
 	padding-right:5px;
 	padding-left:5px;
+	margin-bottom: 5px;
 }
 
 .label_url{
@@ -130,7 +127,9 @@
 
 #color_picker{
 	background-color: #AAAAAA;
-	border: 0px;
+	border: 0px solid;
+	outline: none;
+	background-color: transparent;
 }
 
 #unit_val{
