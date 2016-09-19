@@ -45,11 +45,12 @@ body {
 }
 
 #canvas {
-	padding-left: 0;
-	padding-right: 0;
-	margin-left: auto;
-	margin-right: auto;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
 	display: block;
+	width :100%;
 }
 
 

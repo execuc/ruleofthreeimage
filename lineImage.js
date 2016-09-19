@@ -172,11 +172,11 @@ class LineImageCanvas {
     }
 
     onResize() {
-        var height =  $( window ).height() - this.parent.offset().top
+        var height =  $( window ).height() - this.parent.offset().top;
         this.canvas.attr("width", this.parent.width());
         this.canvas.attr("height", height);
-        console.log(this.parent.height());
         this.transformation.update();
+        this.clear();
         this.draw();
     }
 
@@ -323,12 +323,14 @@ class LineImageCanvas {
     drawLength() {
         var ratio = 1;
         var linesNb = this.lines.length;
-        this.ctx.font = this.parameters.fontHeight.toString() + 'pt Calibri';
+        var fontStr = this.parameters.fontHeight.toString() + 'pt Calibri';
+        this.ctx.font = fontStr;
         this.ctx.strokeStyle = this.parameters.lineColor;
 
         for (var index = 0; index < linesNb; index++) {
             var line = this.transformation.getRealCoordinates(this.lines[index]);
-            var length = lineLength(this.lines[index]);
+            /*var length = lineLength(this.lines[index]);*/
+            var length = lineLength(line);
             var computeLength = 0;
             if (index == 0) {
                 ratio = this.parameters.unitLength / length;
@@ -347,7 +349,7 @@ class LineImageCanvas {
                 valueString = valueString.replace(',', '.')
             var txtBoundingBox = {
                 x: this.ctx.measureText(valueString).width,
-                y: parseInt(this.ctx.font)
+                y: parseInt(fontStr)
             };
             var lineBoundingBox = lineBoundingboxDimension(line);
 

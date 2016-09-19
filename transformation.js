@@ -95,7 +95,7 @@ class Transformation {
 
     getLocalCoordinatesFromEvent(local_x, local_y) {
         var x_local = (local_x - this.img_top_left.x) / this.image_size.x;
-        var y_local = (local_y - this.img_top_left.y) / this.image_size.x;
+        var y_local = (local_y - this.img_top_left.y) / this.image_size.y;
         return {
             x: x_local,
             y: y_local
@@ -104,9 +104,9 @@ class Transformation {
 
     getRealCoordinates(line) {
         var x1_real = line.x1 * this.image_size.x + this.img_top_left.x;
-        var y1_real = line.y1 * this.image_size.x + this.img_top_left.y;
+        var y1_real = line.y1 * this.image_size.y + this.img_top_left.y;
         var x2_real = line.x2 * this.image_size.x + this.img_top_left.x;
-        var y2_real = line.y2 * this.image_size.x + this.img_top_left.y;
+        var y2_real = line.y2 * this.image_size.y + this.img_top_left.y;
         return {
             x1: x1_real,
             y1: y1_real,
