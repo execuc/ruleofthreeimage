@@ -70,8 +70,8 @@ class LineImageCanvas {
                 var line = this.transformation.getRealCoordinates(this.lines[index]);
                 var distance_first = distance(click_x, click_y, line.x1, line.y1);
                 var distance_second = distance(click_x, click_y, line.x2, line.y2);
-
-                if (distance_first < 5) {
+                /*console.log(click_x, click_y, line.x1, line.y1);*/
+                if (distance_first < 10) {
                     if (distance_first < minDistance) {
                         this.current_line = index;
                         this.state = "Middle_Start";
@@ -79,7 +79,7 @@ class LineImageCanvas {
                     }
                 }
 
-                if (distance_second < 5) {
+                if (distance_second < 10) {
                     if (distance_second < minDistance) {
                         this.current_line = index;
                         this.state = "Middle_End";
